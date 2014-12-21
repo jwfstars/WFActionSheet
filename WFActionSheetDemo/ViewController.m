@@ -28,8 +28,7 @@
 }
 
 - (IBAction)show:(UIButton *)sender {
-    
-    
-    [WFActionSheet showActionSheetWithTitle:@"" cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"destructiveButton" otherButtonTitles:@[@"other",@"other",@"other",] cancel:nil destruct:nil other:nil];
+//    [WFActionSheet appearence].tintColor = [UIColor greenColor];
+    [WFActionSheet showActionSheetWithTitle:@"" cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"destructiveButton" otherButtonTitles:@[@"other",@"other",@"other",] cancelBlock:nil otherBlock:nil];
 }
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^WFActionSheetCancelBlock)();
-typedef void (^WFActionSheetDestructiveBlock)();
+//typedef void (^WFActionSheetDestructiveBlock)();
 typedef void (^WFActionSheetOtherBlock)(NSInteger buttonIndex);
 
 
@@ -20,6 +20,6 @@ typedef void (^WFActionSheetOtherBlock)(NSInteger buttonIndex);
 
 + (WFActionSheet *)appearence;
 
-+ (void)showActionSheetWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles cancel:(WFActionSheetCancelBlock)cancel destruct:(WFActionSheetDestructiveBlock)destruct other:(WFActionSheetOtherBlock)other;
++ (void)showActionSheetWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles cancelBlock:(WFActionSheetCancelBlock)cancel otherBlock:(WFActionSheetOtherBlock)other;
 
 @end

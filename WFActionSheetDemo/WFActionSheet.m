@@ -14,7 +14,7 @@
 @interface WFActionSheet()
 
 @property (copy, nonatomic) WFActionSheetCancelBlock cancelBlock;
-@property (copy, nonatomic) WFActionSheetDestructiveBlock destructBlock;
+//@property (copy, nonatomic) WFActionSheetDestructiveBlock destructBlock;
 @property (copy, nonatomic) WFActionSheetOtherBlock otherBlock;
 @property (copy, nonatomic) NSString *cancelTitle;
 @property (copy, nonatomic) NSString *destructTitle;
@@ -248,12 +248,12 @@ static WFActionSheet *sharedInstance;
 }
 
 
-+ (void)showActionSheetWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles cancel:(WFActionSheetCancelBlock)cancel destruct:(WFActionSheetDestructiveBlock)destruct other:(WFActionSheetOtherBlock)other
++ (void)showActionSheetWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles cancelBlock:(WFActionSheetCancelBlock)cancel otherBlock:(WFActionSheetOtherBlock)other
 {
     WFActionSheet *actionSheet = [WFActionSheet actionSheet];
 
     actionSheet.cancelBlock = cancel;
-    actionSheet.destructBlock = destruct;
+//    actionSheet.destructBlock = destruct;
     actionSheet.otherBlock = other;
     
     actionSheet.cancelTitle = cancelButtonTitle;
