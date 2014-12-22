@@ -14,8 +14,9 @@
 		337431841A47025A006E8D54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337431831A47025A006E8D54 /* Images.xcassets */; };
 		337431871A47025A006E8D54 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 337431851A47025A006E8D54 /* LaunchScreen.xib */; };
 		337431931A47025A006E8D54 /* WFActionSheetDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 337431921A47025A006E8D54 /* WFActionSheetDemoTests.m */; };
-		3374319E1A4702D6006E8D54 /* WFActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3374319D1A4702D6006E8D54 /* WFActionSheet.m */; };
-		337431A11A470857006E8D54 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 337431A01A470857006E8D54 /* UIView+WF.m */; };
+		33D58C151A47D48A0030DEA2 /* AGWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D58C0F1A47D48A0030DEA2 /* AGWindowView.m */; };
+		33D58C161A47D48A0030DEA2 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D58C121A47D48A0030DEA2 /* UIView+WF.m */; };
+		33D58C171A47D48A0030DEA2 /* WFActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D58C141A47D48A0030DEA2 /* WFActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +43,13 @@
 		3374318C1A47025A006E8D54 /* WFActionSheetDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WFActionSheetDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		337431911A47025A006E8D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337431921A47025A006E8D54 /* WFActionSheetDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFActionSheetDemoTests.m; sourceTree = "<group>"; };
-		3374319C1A4702D6006E8D54 /* WFActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFActionSheet.h; sourceTree = "<group>"; };
-		3374319D1A4702D6006E8D54 /* WFActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFActionSheet.m; sourceTree = "<group>"; };
-		3374319F1A470857006E8D54 /* UIView+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WF.h"; sourceTree = "<group>"; };
-		337431A01A470857006E8D54 /* UIView+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WF.m"; sourceTree = "<group>"; };
+		33D58C0E1A47D48A0030DEA2 /* AGWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGWindowView.h; sourceTree = "<group>"; };
+		33D58C0F1A47D48A0030DEA2 /* AGWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGWindowView.m; sourceTree = "<group>"; };
+		33D58C101A47D48A0030DEA2 /* AGWindowViewDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGWindowViewDefines.h; sourceTree = "<group>"; };
+		33D58C111A47D48A0030DEA2 /* UIView+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WF.h"; sourceTree = "<group>"; };
+		33D58C121A47D48A0030DEA2 /* UIView+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WF.m"; sourceTree = "<group>"; };
+		33D58C131A47D48A0030DEA2 /* WFActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFActionSheet.h; sourceTree = "<group>"; };
+		33D58C141A47D48A0030DEA2 /* WFActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		3374316A1A47025A006E8D54 = {
 			isa = PBXGroup;
 			children = (
+				33D58C0C1A47D48A0030DEA2 /* WFActionSheet */,
 				337431751A47025A006E8D54 /* WFActionSheetDemo */,
 				3374318F1A47025A006E8D54 /* WFActionSheetDemoTests */,
 				337431741A47025A006E8D54 /* Products */,
@@ -87,8 +92,6 @@
 		337431751A47025A006E8D54 /* WFActionSheetDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3374319F1A470857006E8D54 /* UIView+WF.h */,
-				337431A01A470857006E8D54 /* UIView+WF.m */,
 				3374317A1A47025A006E8D54 /* AppDelegate.h */,
 				3374317B1A47025A006E8D54 /* AppDelegate.m */,
 				3374317D1A47025A006E8D54 /* ViewController.h */,
@@ -97,8 +100,6 @@
 				337431831A47025A006E8D54 /* Images.xcassets */,
 				337431851A47025A006E8D54 /* LaunchScreen.xib */,
 				337431761A47025A006E8D54 /* Supporting Files */,
-				3374319C1A4702D6006E8D54 /* WFActionSheet.h */,
-				3374319D1A4702D6006E8D54 /* WFActionSheet.m */,
 			);
 			path = WFActionSheetDemo;
 			sourceTree = "<group>";
@@ -127,6 +128,28 @@
 				337431911A47025A006E8D54 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33D58C0C1A47D48A0030DEA2 /* WFActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				33D58C0D1A47D48A0030DEA2 /* lib */,
+				33D58C131A47D48A0030DEA2 /* WFActionSheet.h */,
+				33D58C141A47D48A0030DEA2 /* WFActionSheet.m */,
+			);
+			path = WFActionSheet;
+			sourceTree = "<group>";
+		};
+		33D58C0D1A47D48A0030DEA2 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				33D58C0E1A47D48A0030DEA2 /* AGWindowView.h */,
+				33D58C0F1A47D48A0030DEA2 /* AGWindowView.m */,
+				33D58C101A47D48A0030DEA2 /* AGWindowViewDefines.h */,
+				33D58C111A47D48A0030DEA2 /* UIView+WF.h */,
+				33D58C121A47D48A0030DEA2 /* UIView+WF.m */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D58C151A47D48A0030DEA2 /* AGWindowView.m in Sources */,
+				33D58C161A47D48A0030DEA2 /* UIView+WF.m in Sources */,
 				3374317F1A47025A006E8D54 /* ViewController.m in Sources */,
-				337431A11A470857006E8D54 /* UIView+WF.m in Sources */,
 				3374317C1A47025A006E8D54 /* AppDelegate.m in Sources */,
-				3374319E1A4702D6006E8D54 /* WFActionSheet.m in Sources */,
+				33D58C171A47D48A0030DEA2 /* WFActionSheet.m in Sources */,
 				337431791A47025A006E8D54 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +383,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -370,6 +395,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -426,6 +452,7 @@
 				337431981A47025A006E8D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		337431991A47025A006E8D54 /* Build configuration list for PBXNativeTarget "WFActionSheetDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +461,7 @@
 				3374319B1A47025A006E8D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
