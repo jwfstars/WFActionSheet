@@ -250,10 +250,10 @@ static WFActionSheet *sharedInstance;
 - (void)show
 {
     UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-    AGWindowView *windowView = [[AGWindowView alloc] initAndAddToKeyWindow];
     if (iOS8) {
         self.window = window;
     }else {
+        AGWindowView *windowView = [[AGWindowView alloc] initAndAddToKeyWindow];
         self.window = windowView;
     }
     _windowMax = MAX(window.widthOfView, window.heightOfView);
@@ -354,7 +354,11 @@ static WFActionSheet *sharedInstance;
         [self.buttonsArray removeAllObjects];
         _buttonsArray = nil;
         
-        [self.window removeFromSuperview];
+        if (iOS8) {
+            
+        }else {
+            [self.window removeFromSuperview];
+        }
         
         [[NSNotificationCenter defaultCenter]removeObserver:self];
     }];
