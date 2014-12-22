@@ -237,7 +237,7 @@ static WFActionSheet *sharedInstance;
         cover.backgroundColor = [UIColor blackColor];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hide)];
-        [cover addGestureRecognizer:tap];
+//        [cover addGestureRecognizer:tap];
         _cover = cover;
         
         [_window addSubview:_cover];
