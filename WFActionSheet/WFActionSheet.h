@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^WFActionSheetCancelBlock)();
-//typedef void (^WFActionSheetDestructiveBlock)();
 typedef void (^WFActionSheetOtherBlock)(NSInteger buttonIndex);
 
 
