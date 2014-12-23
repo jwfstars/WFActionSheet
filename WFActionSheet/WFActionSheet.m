@@ -183,6 +183,11 @@ static WFActionSheet *sharedInstance;
         [otherButton setTitleColor:_tintColor forState:UIControlStateNormal];
         otherButton.backgroundColor = [UIColor whiteColor];
         otherButton.layer.borderWidth = _buttonBorderWidth;
+        
+        if (_cancelTitle == nil) {
+            otherButton.layer.cornerRadius = _buttonCornerRadius;
+        }
+        
         if (_destructTitle) {
             otherButton.tag = i+1;
         }else {
@@ -204,6 +209,9 @@ static WFActionSheet *sharedInstance;
 
 - (CGFloat)buttonViewHeight
 {
+    if (_cancelTitle ==  nil) {
+        return _buttonsArray.count * (_buttonHeight + _cancelButtonMargin);
+    }
     return _buttonsArray.count * (_buttonHeight + _buttonMargin) - _buttonMargin;
 }
 
@@ -282,14 +290,22 @@ static WFActionSheet *sharedInstance;
     [self.buttonsArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         UIButton *button = obj;
         [self.buttonsView addSubview:obj];
-        button.frame = CGRectMake(0, idx * (_buttonHeight + _buttonMargin), _buttonsView.widthOfView, _buttonHeight);
+        if (_cancelButton == nil) {
+            button.frame = CGRectMake(0, idx * (_buttonHeight + _cancelButtonMargin), _buttonsView.widthOfView, _buttonHeight);
+        }else {
+            button.frame = CGRectMake(0, idx * (_buttonHeight + _buttonMargin), _buttonsView.widthOfView, _buttonHeight);
+        }
     }];
     
     _buttonsView.y = _window.heightOfView;
     [UIView animateWithDuration:_animationDuration delay:0 usingSpringWithDamping:_springLevel initialSpringVelocity:0 options:0 animations:^{
         
         self.cover.alpha = 0.6;
-        _buttonsView.y = _window.heightOfView - [self buttonViewHeight] - _buttonHeight - 2*_cancelButtonMargin;
+        if (_cancelTitle) {
+            _buttonsView.y = _window.heightOfView - [self buttonViewHeight] - _buttonHeight - 2*_cancelButtonMargin;
+        }else {
+            _buttonsView.y = _window.heightOfView - [self buttonViewHeight];
+        }
         
     } completion:^(BOOL finished) {
         
@@ -319,7 +335,11 @@ static WFActionSheet *sharedInstance;
     [self.buttonsArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         UIButton *button = obj;
         [self.buttonsView addSubview:obj];
-        button.frame = CGRectMake(0, idx * (_buttonHeight + _buttonMargin), _buttonWidth, _buttonHeight);
+        if (_cancelButton == nil) {
+            button.frame = CGRectMake(0, idx * (_buttonHeight + _cancelButtonMargin), _buttonWidth, _buttonHeight);
+        }else {
+            button.frame = CGRectMake(0, idx * (_buttonHeight + _buttonMargin), _buttonWidth, _buttonHeight);
+        }
     }];
     
     
